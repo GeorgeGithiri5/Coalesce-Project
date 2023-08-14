@@ -1,0 +1,94 @@
+steps:
+  ORDERS-e2567fa0-07c6-4d9d-a805-bed0d0eadad8:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SAMPLE_2
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ca0af63f-f83e-44dd-98e2-11de73a47563
+              stepCounter: e2567fa0-07c6-4d9d-a805-bed0d0eadad8
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a328fd52-8cf5-4064-bd6f-552196c624b5
+              stepCounter: e2567fa0-07c6-4d9d-a805-bed0d0eadad8
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: USER_ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a64757aa-6c62-48bf-bd7e-83a7c026871f
+              stepCounter: e2567fa0-07c6-4d9d-a805-bed0d0eadad8
+            config: {}
+            dataType: DATE
+            defaultValue: ""
+            description: ""
+            name: ORDER_DATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 514ed716-7bd8-4cce-a67f-f7b50b5f378e
+              stepCounter: e2567fa0-07c6-4d9d-a805-bed0d0eadad8
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: STATUS
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 11550bf4-54e7-42d5-a012-cabf0352111b
+              stepCounter: e2567fa0-07c6-4d9d-a805-bed0d0eadad8
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: ""
+            name: _ETL_LOADED_AT
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SAMPLE_2', 'ORDERS') }}
+      name: ORDERS
+      schema: ""
+      sqlType: Source
+      table: ORDERS
+      type: sourceInput
+    stepCounter: e2567fa0-07c6-4d9d-a805-bed0d0eadad8

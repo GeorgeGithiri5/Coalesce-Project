@@ -1,0 +1,124 @@
+steps:
+  PAYMENT-3b8ad2bd-6052-404a-8a00-8f5375f5dae6:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SAMPLE_1
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 841da3bf-db6d-4155-8be7-0ba810f45e7c
+              stepCounter: 3b8ad2bd-6052-404a-8a00-8f5375f5dae6
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 7b967b17-c56b-4f7c-b4c2-e6d0c75d549b
+              stepCounter: 3b8ad2bd-6052-404a-8a00-8f5375f5dae6
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: ORDERID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 9e222393-088f-4d51-b004-18a713cf9c99
+              stepCounter: 3b8ad2bd-6052-404a-8a00-8f5375f5dae6
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: PAYMENTMETHOD
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 50ee03f6-dd7c-41af-872b-9db0dcf21927
+              stepCounter: 3b8ad2bd-6052-404a-8a00-8f5375f5dae6
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: STATUS
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 113c6845-b7ab-47c9-a818-ecc4d76c3b58
+              stepCounter: 3b8ad2bd-6052-404a-8a00-8f5375f5dae6
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: AMOUNT
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 261eb2fe-ab6e-4609-bc94-49e66b32e8da
+              stepCounter: 3b8ad2bd-6052-404a-8a00-8f5375f5dae6
+            config: {}
+            dataType: DATE
+            defaultValue: ""
+            description: ""
+            name: CREATED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 5723e4bd-9cd5-485d-a00c-c4936d8e4d7b
+              stepCounter: 3b8ad2bd-6052-404a-8a00-8f5375f5dae6
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: ""
+            name: _BATCHED_AT
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SAMPLE_1', 'PAYMENT') }}
+      name: PAYMENT
+      schema: ""
+      sqlType: Source
+      table: PAYMENT
+      type: sourceInput
+    stepCounter: 3b8ad2bd-6052-404a-8a00-8f5375f5dae6

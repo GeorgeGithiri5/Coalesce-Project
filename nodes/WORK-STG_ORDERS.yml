@@ -1,0 +1,106 @@
+steps:
+  STG_ORDERS-1bbc28e2-8da3-4f2b-8f7f-e4ae18c6923f:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: WORK
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 52c392d2-ffa9-44d2-8979-a5e742365223
+              stepCounter: 1bbc28e2-8da3-4f2b-8f7f-e4ae18c6923f
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: ca0af63f-f83e-44dd-98e2-11de73a47563
+                    stepCounter: e2567fa0-07c6-4d9d-a805-bed0d0eadad8
+                transform: ""
+          - columnReference:
+              columnCounter: 686baa92-db33-4ce5-8021-b355e4ea3433
+              stepCounter: 1bbc28e2-8da3-4f2b-8f7f-e4ae18c6923f
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: USER_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a328fd52-8cf5-4064-bd6f-552196c624b5
+                    stepCounter: e2567fa0-07c6-4d9d-a805-bed0d0eadad8
+                transform: ""
+          - columnReference:
+              columnCounter: 3e5df8aa-6160-4c5c-8679-2840363632f2
+              stepCounter: 1bbc28e2-8da3-4f2b-8f7f-e4ae18c6923f
+            dataType: DATE
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ORDER_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a64757aa-6c62-48bf-bd7e-83a7c026871f
+                    stepCounter: e2567fa0-07c6-4d9d-a805-bed0d0eadad8
+                transform: ""
+          - columnReference:
+              columnCounter: df60c47f-be97-422f-b12d-f296b6cd29e0
+              stepCounter: 1bbc28e2-8da3-4f2b-8f7f-e4ae18c6923f
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: STATUS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 514ed716-7bd8-4cce-a67f-f7b50b5f378e
+                    stepCounter: e2567fa0-07c6-4d9d-a805-bed0d0eadad8
+                transform: ""
+          - columnReference:
+              columnCounter: e1944f52-1361-404c-b0d0-7731821f01a3
+              stepCounter: 1bbc28e2-8da3-4f2b-8f7f-e4ae18c6923f
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: _ETL_LOADED_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 11550bf4-54e7-42d5-a012-cabf0352111b
+                    stepCounter: e2567fa0-07c6-4d9d-a805-bed0d0eadad8
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SAMPLE_2
+                nodeName: ORDERS
+            join:
+              joinCondition: FROM {{ ref('SAMPLE_2', 'ORDERS') }} "ORDERS"
+            name: STG_ORDERS
+            noLinkRefs: []
+      name: STG_ORDERS
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 1bbc28e2-8da3-4f2b-8f7f-e4ae18c6923f

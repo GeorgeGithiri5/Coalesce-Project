@@ -1,0 +1,134 @@
+steps:
+  STG_PAYMENT-61e6567b-1174-4bad-b65a-6e1215bc3ae8:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: WORK
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: d2076f32-cfd4-46c2-8e8f-c1c702f5bcc0
+              stepCounter: 61e6567b-1174-4bad-b65a-6e1215bc3ae8
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 841da3bf-db6d-4155-8be7-0ba810f45e7c
+                    stepCounter: 3b8ad2bd-6052-404a-8a00-8f5375f5dae6
+                transform: ""
+          - columnReference:
+              columnCounter: 0819a01e-2b6d-4e3b-aeb7-984b6726cfd9
+              stepCounter: 61e6567b-1174-4bad-b65a-6e1215bc3ae8
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ORDERID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7b967b17-c56b-4f7c-b4c2-e6d0c75d549b
+                    stepCounter: 3b8ad2bd-6052-404a-8a00-8f5375f5dae6
+                transform: ""
+          - columnReference:
+              columnCounter: 2f35eac9-373b-45be-a81b-4539fdf1a9d8
+              stepCounter: 61e6567b-1174-4bad-b65a-6e1215bc3ae8
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PAYMENTMETHOD
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 9e222393-088f-4d51-b004-18a713cf9c99
+                    stepCounter: 3b8ad2bd-6052-404a-8a00-8f5375f5dae6
+                transform: ""
+          - columnReference:
+              columnCounter: f23bf02b-5ce5-4280-9a73-48f3216a3741
+              stepCounter: 61e6567b-1174-4bad-b65a-6e1215bc3ae8
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: STATUS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 50ee03f6-dd7c-41af-872b-9db0dcf21927
+                    stepCounter: 3b8ad2bd-6052-404a-8a00-8f5375f5dae6
+                transform: ""
+          - columnReference:
+              columnCounter: e3a5735a-5428-421d-9017-8552e671ae2c
+              stepCounter: 61e6567b-1174-4bad-b65a-6e1215bc3ae8
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: AMOUNT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 113c6845-b7ab-47c9-a818-ecc4d76c3b58
+                    stepCounter: 3b8ad2bd-6052-404a-8a00-8f5375f5dae6
+                transform: ""
+          - columnReference:
+              columnCounter: e38571a2-08f1-47d8-90f9-9eea5642bb17
+              stepCounter: 61e6567b-1174-4bad-b65a-6e1215bc3ae8
+            dataType: DATE
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CREATED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 261eb2fe-ab6e-4609-bc94-49e66b32e8da
+                    stepCounter: 3b8ad2bd-6052-404a-8a00-8f5375f5dae6
+                transform: ""
+          - columnReference:
+              columnCounter: f7e0ed09-b15b-4dda-8034-2d4e46e20b3f
+              stepCounter: 61e6567b-1174-4bad-b65a-6e1215bc3ae8
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: _BATCHED_AT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5723e4bd-9cd5-485d-a00c-c4936d8e4d7b
+                    stepCounter: 3b8ad2bd-6052-404a-8a00-8f5375f5dae6
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SAMPLE_1
+                nodeName: PAYMENT
+            join:
+              joinCondition: FROM {{ ref('SAMPLE_1', 'PAYMENT') }} "PAYMENT"
+            name: STG_PAYMENT
+            noLinkRefs: []
+      name: STG_PAYMENT
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 61e6567b-1174-4bad-b65a-6e1215bc3ae8

@@ -1,0 +1,64 @@
+steps:
+  CUSTOMERS-01ca8514-6d2c-4923-b57b-83d840616484:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SAMPLE_2
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 99ff26e5-3a0c-4916-bb09-5b631bf6bd3d
+              stepCounter: 01ca8514-6d2c-4923-b57b-83d840616484
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 5404aed4-97ed-46fe-b202-33f079f11f8a
+              stepCounter: 01ca8514-6d2c-4923-b57b-83d840616484
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: FIRST_NAME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: da821f8f-b0b6-484a-8972-756d3e37804f
+              stepCounter: 01ca8514-6d2c-4923-b57b-83d840616484
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: LAST_NAME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SAMPLE_2', 'CUSTOMERS') }}
+      name: CUSTOMERS
+      schema: ""
+      sqlType: Source
+      table: CUSTOMERS
+      type: sourceInput
+    stepCounter: 01ca8514-6d2c-4923-b57b-83d840616484
