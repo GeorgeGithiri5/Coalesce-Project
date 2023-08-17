@@ -1,5 +1,5 @@
 steps:
-  STG_PAYMENT-61e6567b-1174-4bad-b65a-6e1215bc3ae8:
+  STG_PAYMENT-b63df178-cc77-4219-84a1-1ee30f125e97:
     operation:
       config:
         insertStrategy: INSERT
@@ -14,11 +14,22 @@ steps:
       locationName: WORK
       materializationType: table
       metadata:
-        appliedNodeTests: []
+        appliedNodeTests:
+          - continueOnFailure: true
+            description: ""
+            name: Test
+            runOrder: After
+            templateString: |-
+              select
+                  orderid,
+                  sum(amount) as total_amount
+              from STG_PAYMENT
+              group by 1
+              having not (total_amount >= 0)
         columns:
           - columnReference:
-              columnCounter: d2076f32-cfd4-46c2-8e8f-c1c702f5bcc0
-              stepCounter: 61e6567b-1174-4bad-b65a-6e1215bc3ae8
+              columnCounter: 6fbe117f-ef30-411e-96e9-8e22f367f802
+              stepCounter: b63df178-cc77-4219-84a1-1ee30f125e97
             dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
@@ -31,8 +42,8 @@ steps:
                     stepCounter: 3b8ad2bd-6052-404a-8a00-8f5375f5dae6
                 transform: ""
           - columnReference:
-              columnCounter: 0819a01e-2b6d-4e3b-aeb7-984b6726cfd9
-              stepCounter: 61e6567b-1174-4bad-b65a-6e1215bc3ae8
+              columnCounter: 24e6f57e-27ed-495a-9609-0a4b4bb49474
+              stepCounter: b63df178-cc77-4219-84a1-1ee30f125e97
             dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
@@ -45,8 +56,8 @@ steps:
                     stepCounter: 3b8ad2bd-6052-404a-8a00-8f5375f5dae6
                 transform: ""
           - columnReference:
-              columnCounter: 2f35eac9-373b-45be-a81b-4539fdf1a9d8
-              stepCounter: 61e6567b-1174-4bad-b65a-6e1215bc3ae8
+              columnCounter: 1f1227fe-ea88-4d3f-8ce9-d8e3bd450d87
+              stepCounter: b63df178-cc77-4219-84a1-1ee30f125e97
             dataType: VARCHAR(16777216)
             description: ""
             hashColumns: []
@@ -59,8 +70,8 @@ steps:
                     stepCounter: 3b8ad2bd-6052-404a-8a00-8f5375f5dae6
                 transform: ""
           - columnReference:
-              columnCounter: f23bf02b-5ce5-4280-9a73-48f3216a3741
-              stepCounter: 61e6567b-1174-4bad-b65a-6e1215bc3ae8
+              columnCounter: 343e8092-2de0-433d-800b-bfe44d77ee54
+              stepCounter: b63df178-cc77-4219-84a1-1ee30f125e97
             dataType: VARCHAR(16777216)
             description: ""
             hashColumns: []
@@ -73,8 +84,8 @@ steps:
                     stepCounter: 3b8ad2bd-6052-404a-8a00-8f5375f5dae6
                 transform: ""
           - columnReference:
-              columnCounter: e3a5735a-5428-421d-9017-8552e671ae2c
-              stepCounter: 61e6567b-1174-4bad-b65a-6e1215bc3ae8
+              columnCounter: 0dc4e1e3-631c-47f5-b822-4c75255b4f58
+              stepCounter: b63df178-cc77-4219-84a1-1ee30f125e97
             dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
@@ -87,8 +98,8 @@ steps:
                     stepCounter: 3b8ad2bd-6052-404a-8a00-8f5375f5dae6
                 transform: ""
           - columnReference:
-              columnCounter: e38571a2-08f1-47d8-90f9-9eea5642bb17
-              stepCounter: 61e6567b-1174-4bad-b65a-6e1215bc3ae8
+              columnCounter: 421785d7-4d3e-43bb-b480-e61a81385430
+              stepCounter: b63df178-cc77-4219-84a1-1ee30f125e97
             dataType: DATE
             description: ""
             hashColumns: []
@@ -101,8 +112,8 @@ steps:
                     stepCounter: 3b8ad2bd-6052-404a-8a00-8f5375f5dae6
                 transform: ""
           - columnReference:
-              columnCounter: f7e0ed09-b15b-4dda-8034-2d4e46e20b3f
-              stepCounter: 61e6567b-1174-4bad-b65a-6e1215bc3ae8
+              columnCounter: b44b04cf-497a-4753-b06f-082c1819ffc7
+              stepCounter: b63df178-cc77-4219-84a1-1ee30f125e97
             dataType: TIMESTAMP_NTZ(9)
             description: ""
             hashColumns: []
@@ -129,6 +140,6 @@ steps:
       name: STG_PAYMENT
       overrideSQL: false
       schema: ""
-      sqlType: Stage
+      sqlType: "2"
       type: sql
-    stepCounter: 61e6567b-1174-4bad-b65a-6e1215bc3ae8
+    stepCounter: b63df178-cc77-4219-84a1-1ee30f125e97
